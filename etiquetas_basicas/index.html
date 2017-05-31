@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<!--
+	Estos son comentarios
+	-->
+</head>
+<body>
+	Operaci&oacute;n, Nu&ntilde;ez<br>
+	Estos son los codigos para las vocales con acento: 
+	&aacute;<br>
+	&eacute;<br>
+	&iacute;<br>
+	&oacute;<br>
+	&uacute;<br>
+	
+	Etiqueta de ancla (Anchor): 
+	<!-- <ETIQUETA PROPIEDAD="VALOR"></ETIQUETA> -->
+	<a href="http://google.hn">Ir a Google</a><br>
+	<a href="http://google.hn" target="_blank">Ir a Google en una nueva pesta&ntilde;a</a><br>
+	<a href="pagina1.html">Ir a la pagina 1</a><br>
+	<a href="pagina2.html">Ir a la pagina 2</a>
+	<a href="archivos/Sílabo410_II-2017.pdf" download>Descargar Silabo</a>
+	<a href="archivos/ScenicView-8.6.0.zip">Descargar zip</a>
+	
+	<h1>Titulo 1</h1>
+	<h2>Titulo 2</h2>
+	<h3>Titulo 3</h3>
+	<h4>Titulo 4</h4>
+	<h5>Titulo 5</h5>
+	<h6>Titulo 6</h6>
+	<p>Este es un parrafo</p>
+	<p>Este es otro parrafo</p>
+
+	<table border="1px" cellspacing="0">
+		<tr>
+			<th>Titulo 1</th>
+			<th>Titulo 2</th>
+			<th>Titulo 3</th>
+			<th>Titulo 4</th>
+			<th>Titulo 5</th>
+		</tr>
+		<tr>
+			<td>Valor 1</td>
+			<td>Valor 2</td>
+			<td>Valor 3</td>
+			<td>Valor 4</td>
+			<td>Valor 5</td>
+		</tr>
+		<tr>
+			<td>Valor 1</td>
+			<td>Valor 2</td>
+			<td>Valor 3</td>
+			<td>Valor 4</td>
+			<td>Valor 5</td>
+		</tr>
+	</table>
+
+
+	<hr>
+	<h1>Etiquetas para formularios</h1>
+	<form action="pagina1.html" method="GET">
+		Nombre: <input type="text" name="txt-nombre" id="txt-nombre" value="Juan"><br>
+		Apellido: <input type="text" name="txt-apellido" id="txt-apellido"><br>
+		Contraseña: <input type="password" name="txt-contrasena" id="txt-contrasena"><br>
+		<!--HTML 5-->Fecha nacimiento: <input type="date" name="txt-fecha-nacimiento" id="txt-fecha-nacimiento"><br>
+		<!--HTML 5-->Correo: <input type="email" name="txt-correo" id="txt-correo"><br>
+		<!--HTML 5-->Edad: <input type="number" name="txt-edad" id="txt-edad"><br>
+		<!--HTML 5-->Color: <input type="color" name="txt-" id="txt-"><br>
+		<!--HTML 5-->Mes: <input type="month" name="txt-" id="txt-"><br>
+		<!--HTML 5-->Hora: <input type="time" name="txt-" id="txt-"><br>
+		<!--HTML 5-->Telefono: <input type="phone" name="txt-" id="txt-"><br>
+		<!-- Para que funcionen bien los radiobotones y solo se pueda seleccionar uno, la propiedad name debe ser igual en todas las opciones -->
+		Genero: <label><input type="radio" name="rbt-genero" value="F">Femenino</label>
+				<label><input type="radio" name="rbt-genero" value="M">Masculino</label><br> 
+		Gustos: <label><input type="checkbox" name="chk-gustos[]" value="1">Pollo</label>
+				<label><input type="checkbox" name="chk-gustos[]" value="2">Mondongo</label>
+				<label><input type="checkbox" name="chk-gustos[]" value="3">Baleadas</label><br>
+
+		<input type="reset" value="Reestablecer valores">
+		<input type="submit" value="Procesar informacion">
+	</form>
+</body>
+</html>
+
