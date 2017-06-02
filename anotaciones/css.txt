@@ -1,0 +1,19 @@
+CSS (Cascading Style Sheets, Hojas de estilo en cascada)
+
+Formas de incluir CSS en una página web:
+*En linea: Para aplicar css en linea se debe utilizar la propiedad style en la etiqueta a la cual se quiere aplicar el estilo.
+*En el encabezado de la página
+*Utilizando archivos externos
+
+
+Sintaxis CSS, esta se basa en selectores los cuales pueden ser IDs, Clases CSS o nombres de etiquetas.
+
+SELECTOR{
+	propiedad1:valor1;
+	propiedad2:valor2;
+	...
+	propiedadN:valorN;
+}
+
+
+En caso de incluir CSS en linea no se utiliza un selector.

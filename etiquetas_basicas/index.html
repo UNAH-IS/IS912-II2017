@@ -78,7 +78,23 @@
 		Gustos: <label><input type="checkbox" name="chk-gustos[]" value="1">Pollo</label>
 				<label><input type="checkbox" name="chk-gustos[]" value="2">Mondongo</label>
 				<label><input type="checkbox" name="chk-gustos[]" value="3">Baleadas</label><br>
-
+		Historia: <br>
+		<textarea name="txt-historia" id="txt-historia" cols="50" rows="10"></textarea><br>
+		Pais donde nacio: 
+		<select name="slc-pais" id="slc-pais">
+			<option value="1">Honduras</option>
+			<option value="2">Nicaragua</option>
+			<option value="3">El Salvador</option>
+			<option value="4">Panama</option>
+		</select><br>
+		<!--En el caso de querer seleccionar multiples opciones utilizar la propiedad multiple y el name debe llevar corchetes-->
+		Paises que ha visitado: <br>
+		<select name="slc-pais-visita[]" id="slc-pais" multiple>
+			<option value="1">Honduras</option>
+			<option value="2">Nicaragua</option>
+			<option value="3">El Salvador</option>
+			<option value="4">Panama</option>
+		</select><br>
 		<input type="reset" value="Reestablecer valores">
 		<input type="submit" value="Procesar informacion">
 	</form>

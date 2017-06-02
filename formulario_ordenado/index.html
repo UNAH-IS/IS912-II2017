@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<!--
+	Estos son comentarios
+	-->
+</head>
+<body>
+	<h1>Registro de personas</h1>
+	<form action="pagina1.html" method="GET">
+		<table>
+			<tr>
+				<td>Nombre:</td>
+				<td><input type="text" name="txt-nombre" id="txt-nombre" value="Juan"></td>
+			</tr>
+			<tr>
+				<td>Apellido</td>
+				<td><input type="text" name="txt-apellido" id="txt-apellido"></td>
+			</tr>
+			<tr>
+				<td>Contraseña:</td>
+				<td><input type="password" name="txt-apellido" id="txt-apellido"></td>
+			</tr>
+			<tr>
+				<td>Fecha nacimiento:</td>
+				<td><input type="date" name="txt-fecha-nacimiento" id="txt-fecha-nacimiento"></td>
+			</tr>
+			<tr>
+				<td>Correo:</td>
+				<td><input type="email" name="txt-correo" id="txt-correo"></td>
+			</tr>
+			<tr>
+				<td>Edad:</td>
+				<td><input type="number" name="txt-edad" id="txt-edad" min="1" max="130"></td>
+			</tr>
+			<tr>
+				<td>Color</td>
+				<td><input type="color" name="txt-" id="txt-"></td>
+			</tr>
+			<tr>
+				<td>Mes:</td>
+				<td><input type="month" name="txt-" id="txt-"></td>
+			</tr>
+			<tr>
+				<td>Tiempo:</td>
+				<td><input type="time" name="txt-" id="txt-"></td>
+			</tr>
+			<tr>
+				<td>Telefono:</td>
+				<td><input type="tel" name="txt-" id="txt-"></td>
+			</tr>
+			<tr>
+				<td>Genero:</td>
+				<td>
+					<label><input type="radio" name="rbt-genero" value="F">Femenino</label>
+				 	<label><input type="radio" name="rbt-genero" value="M">Masculino</label>
+				</td>
+			</tr>
+			<tr>
+				<td>Gustos:</td>
+				<td>
+					<label><input type="checkbox" name="chk-gustos[]" value="1">Pollo</label>
+					<label><input type="checkbox" name="chk-gustos[]" value="2">Mondongo</label>
+					<label><input type="checkbox" name="chk-gustos[]" value="3">Baleadas</label>
+				</td>
+			</tr>
+			<tr>
+				<td>Historia</td>
+				<td><textarea name="txt-historia" id="txt-historia" cols="50" rows="10"></textarea></td>
+			</tr>
+			<tr>
+				<td>Pais donde nacio: </td>
+				<td>
+					<select name="slc-pais" id="slc-pais">
+						<option value="1">Honduras</option>
+						<option value="2">Nicaragua</option>
+						<option value="3">El Salvador</option>
+						<option value="4">Panama</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Paises que ha visitado:</td>
+				<td>
+					<select name="slc-pais-visita[]" id="slc-pais" multiple>
+						<option value="1">Honduras</option>
+						<option value="2">Nicaragua</option>
+						<option value="3">El Salvador</option>
+						<option value="4">Panama</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="reset" value="Reestablecer"><input type="submit" value="Procesar informacion">
+				</td>
+			</tr>
+		</table>		
+	</form>
+</body>
+</html>
+
+
