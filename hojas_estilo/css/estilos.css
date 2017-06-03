@@ -1,0 +1,29 @@
+/*Incliusion de CSS en archivo externo, nota: no incluye las etiquetas style*/
+h1{
+	color:#d9ef29;
+}
+body{
+	background-image: url(../img/bg.jpg);
+	background-position: center center;
+	background-attachment: fixed;
+	/*background-repeat: no-repeat;-*/
+}
+/*El numeral se utiliza para hacer referencia a IDs*/
+#contenido{
+	background-color:rgba(0,0,0,0.5); 
+	color:#ffffff;
+	border:2px #ffffff solid;
+	padding:50px; 
+	margin:50px;
+}
+/*Las clases CSS se definen con un punto (.) luego el nombre de la clase. */
+.parrafo-verde{	
+	color:#8bee1f;
+}
+.parrafo-azul{
+	color:#18eee0;
+}
+.texto-negrita{
+	font-weight: bold;
+	color:#F0F0F0;
+}
