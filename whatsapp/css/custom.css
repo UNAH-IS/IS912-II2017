@@ -11,7 +11,7 @@ span {
 }
 
 body {
-  background: url("http://shurl.esy.es/y") no-repeat fixed center;
+  background: url("../img/bg.jpg") no-repeat fixed center;
   background-size: cover;
 }
 
@@ -314,7 +314,7 @@ body {
 .message {
   padding: 0 !important;
   margin: 0 !important;
-  background-image: url("w.jpg");   
+  background-image: url("../img/w.jpg");   
   overflow-y: auto;
   border: 1px solid #f7f7f7;
   height: calc(100% - 120px);
