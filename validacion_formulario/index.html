@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejemplo Bootstrap</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <form action="pagina1.html" method="GET">
+            <table class="table table-striped table-hover">
+              <tr>       
+                <td>Nombre:</td>
+                <td><input class="form-control" type="text" name="txt-nombre" id="txt-nombre" placeholder="Ingrese un nombre"></td>
+              </tr>
+              <tr>
+                <td>Apellido</td>
+                <td><input class="form-control" type="text" name="txt-apellido" id="txt-apellido"></td>
+              </tr>
+              <tr>
+                <td>Contraseña:</td>
+                <td><input class="form-control" type="password" name="txt-apellido" id="txt-apellido"></td>
+              </tr>
+              <tr>
+                <td>Fecha nacimiento:</td>
+                <td><input class="form-control" type="date" name="txt-fecha-nacimiento" id="txt-fecha-nacimiento"></td>
+              </tr>
+              <tr class="danger">
+                <td>Correo:</td>
+                <td><input class="form-control" type="email" name="txt-correo" id="txt-correo"></td>
+              </tr>
+              <tr>
+                <td>Edad:</td>
+                <td><input class="form-control" type="number" name="txt-edad" id="txt-edad" min="1" max="130"></td>
+              </tr>
+              <tr>
+                <td>Color</td>
+                <td><input class="form-control" type="color" name="txt-" id="txt-"></td>
+              </tr>
+              <tr>
+                <td>Mes:</td>
+                <td><input class="form-control" type="month" name="txt-" id="txt-"></td>
+              </tr>
+              <tr>
+                <td>Tiempo:</td>
+                <td><input class="form-control" type="time" name="txt-" id="txt-"></td>
+              </tr>
+              <tr>
+                <td>Telefono:</td>
+                <td><input class="form-control" type="tel" name="txt-" id="txt-"></td>
+              </tr>
+              <tr>
+                <td>Genero:</td>
+                <td>
+                  <label><input type="radio" name="rbt-genero" value="F">Femenino</label>
+                  <label><input type="radio" name="rbt-genero" value="M">Masculino</label>
+                </td>
+              </tr>
+              <tr>
+                <td>Gustos:</td>
+                <td>
+                  <label><input type="checkbox" name="chk-gustos[]" value="1">Pollo</label>
+                  <label><input type="checkbox" name="chk-gustos[]" value="2">Mondongo</label>
+                  <label><input type="checkbox" name="chk-gustos[]" value="3">Baleadas</label>
+                </td>
+              </tr>
+              <tr>
+                <td>Historia</td>
+                <td><textarea class="form-control"  name="txt-historia" id="txt-historia" cols="50" rows="10"></textarea></td>
+              </tr>
+              <tr>
+                <td>Pais donde nacio: </td>
+                <td>
+                  <select class="form-control" name="slc-pais" id="slc-pais">
+                    <option value="1">Honduras</option>
+                    <option value="2">Nicaragua</option>
+                    <option value="3">El Salvador</option>
+                    <option value="4">Panama</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>Paises que ha visitado:</td>
+                <td>
+                  <select class="form-control" name="slc-pais-visita[]" id="slc-pais" multiple>
+                    <option value="1">Honduras</option>
+                    <option value="2">Nicaragua</option>
+                    <option value="3">El Salvador</option>
+                    <option value="4">Panama</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <button type="button" class="btn btn-warning" onclick="guardarRegistro();">
+                    <span class="glyphicon glyphicon-save"></span> Guardar
+                  </button>
+                </td>
+              </tr>
+            </table>    
+          </form>          
+          <div id="resultado-validacion"></div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <table class="table table-striped table-hover">
+              <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+              </tr>
+              <tbody id="tbl-registros">
+                <tr>
+                  <td>Juan</td>
+                  <td>Perez</td>
+                </tr>
+              </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/funcionalidades.js"></script>
+  </body>
+</html>
