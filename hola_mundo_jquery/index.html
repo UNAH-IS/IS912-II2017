@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" id="txt-nombre" placeholder="Nombre">
+	<button onclick="mostrarNombre();">Mostrar nombre</button>
+	<button onclick="asignarNombre();">Asignar nombre</button>
+	<div id="div-contenido">Este es el contenido del div</div>
+	<button onclick="mostrarContenidoDiv();">Mostrar contenido del div</button>
+	<button onclick="asignarContenidoDiv();">Asignar contenido del div</button>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+
+		function mostrarNombre(){
+			alert($("#txt-nombre").val());
+		}	
+		/*
+			Equivalencia con javascript nativo
+			document.getElementById("txt-nombre").value;
+		*/
+
+		function asignarNombre(){
+			$("#txt-nombre").val("Matusalen");
+		}
+		/*
+			Equivalencia con javascript nativo
+			document.getElementById("txt-nombre").value = valor;
+		*/
+
+		function mostrarContenidoDiv(){
+			alert($("#div-contenido").html());
+		}
+
+		function asignarContenidoDiv(){
+			$("#div-contenido").html("Este es el nuevo contenido del DIV!!!!!!");
+		}
+	</script>
+</body>
+</html>
