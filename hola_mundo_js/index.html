@@ -8,6 +8,7 @@
 	</style>
 </head>
 <body>
+	
 	<!-- -->
 	<input type="text" name="txt-nombre" id="txt-nombre">
 	<input type="text" name="txt-apellido" id="txt-apellido">
@@ -16,47 +17,16 @@
 	<button type="button" onclick="enviarInformacion('Hola', 'Mundo');">Enviar</button>
 	<button type="button" onclick="enviarInformacionInputs();">Enviar</button>
 	<button type="button" onclick="asignarValor();">Asignar Valor</button>
+	<button type="button" onclick="redireccionar();">Ir a google</button>
 	<br>
-	<div style="background-color: #000;color:#fff;" onclick="alert('Se hizo click en el div');"	onmouseover="mouseOver();" onmouseenter="mouseEnter();" onmouseleave="mouseLeave();">
+	<div id="div-contenido" style="background-color: #000;color:#fff;margin:100px;padding:50px;" onclick="alert('Se hizo click en el div');"	onmouseover="mouseOver();" onmouseenter="mouseEnter();" onmouseleave="mouseLeave();">
 		Contenido div
 	</div>
 	<script>
-		// Comentarios de una linea
-		/*
-		Comentarios de multiples lineas
-		*/
-		var a; //Undefined
-		b = 'Juan';
-		for (var i=0;i<10;i++)
-			document.write('<strong>Hola ' + b + '</strong><br>');
-
-		alert("Este es un cuadro de dialogo");
-		console.log("Este es un mensaje en la consola de javascript");
-
-		function enviarInformacion(a,b){
-			alert("Se enviara la informacion " + a + " y " + b);
-		}
-
-		enviarInformacionInputs = function (){
-			alert("Nombre: " + document.getElementById("txt-nombre").value);
-			alert("Apellido: " + document.getElementById("txt-apellido").value);
-		}
-
-		function asignarValor(){
-			document.getElementById("txt-nombre").value = 'Matusalen';
-			document.getElementById("txt-apellido").value = 'Rodriguez';
-		}
-
-		function mouseOver(){
-			console.log("Evento Mouse Over ");
-		}
-		function mouseEnter(){
-			console.log("Evento Mouse Enter");
-		}
-		function mouseLeave(){
-			console.log("Evento Mouse Leave");
-		}
-
+		alert(document.getElementById("div-contenido").innerHTML);
 	</script>
+	<br>
+	<button onclick="cambiarContenidoDiv();">Cambiar contenido div</button>
+	<script src="js/funcionalidades.js"></script>
 </body>
 </html>
