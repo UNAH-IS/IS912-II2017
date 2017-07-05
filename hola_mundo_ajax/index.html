@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hola mundo AJAX</title>
+</head>
+<body>
+	<input type="text" id="txt-correo" placeholder="Correo">
+	<input type="text" id="txt-password" placeholder="Password">
+	<button type="button" id="btn-guardar">Guardar</button>
+	<!--input type="button"-->
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		$("#btn-guardar").click(function(){
+			
+
+			//URL Encoded
+			//parametro=valor&parametro=valor...
+			$parametros = 	"txt-correo="+$("#txt-correo").val()+"&"+
+							"txt-password="+$("#txt-password").val();
+			alert($parametros);
+			$.ajax(
+				{
+					url: "procesar.php",
+					data:$parametros,
+					method:"POST",
+					success:function(respuesta){
+						alert(respuesta);
+					},
+					error:function(){
+						alert("Ocurrio un error");
+					}
+
+				}
+			);
+		});
+	</script>
+</body>
+</html>
