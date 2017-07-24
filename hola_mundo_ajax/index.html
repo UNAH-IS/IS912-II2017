@@ -2,32 +2,44 @@
 <html>
 <head>
 	<title>Hola mundo AJAX</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<style type="text/css">
+		.form-control{
+			width: inherit;
+			display: inline;
+		}
+	</style>
 </head>
 <body>
-	<input type="text" id="txt-correo" placeholder="Correo">
-	<input type="text" id="txt-password" placeholder="Password">
-	<button type="button" id="btn-guardar">Guardar</button>
+	<input class="form-control" type="text" id="txt-correo" placeholder="Correo">
+	<input class="form-control" type="text" id="txt-password" placeholder="Password">
+	<button data-loading-text="Cargando..." class="btn btn-danger" type="button" id="btn-guardar">Guardar</button>
+	<img id="img-loading" src="img/loading.gif" style="display:none;">
+	<div id="div-respuesta"></div>
 	<!--input type="button"-->
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript">
 		$("#btn-guardar").click(function(){
-			
-
+			$("#btn-guardar").button("loading");
+			$("#img-loading").show();
 			//URL Encoded
 			//parametro=valor&parametro=valor...
-			$parametros = 	"txt-correo="+$("#txt-correo").val()+"&"+
-							"txt-password="+$("#txt-password").val();
-			alert($parametros);
+			var parametros ="txt-correo="+$("#txt-correo").val()+"&"+
+							"txt-password="+$("#txt-password").val()+"&opcion=1";
+			//alert(parametros);
 			$.ajax(
 				{
-					url: "procesar.php",
-					data:$parametros,
+					url: "procesar.php?otro-parametro=1",
+					data:parametros,
 					method:"POST",
 					success:function(respuesta){
-						alert(respuesta);
+						$("#div-respuesta").html(respuesta);
+						$("#img-loading").hide();
+						$("#btn-guardar").button("reset");
 					},
-					error:function(){
-						alert("Ocurrio un error");
+					error:function(error){
+						alert("Ocurrio un error:" + error);
 					}
 
 				}
@@ -35,4 +47,4 @@
 		});
 	</script>
 </body>
-</html>
+</html>	

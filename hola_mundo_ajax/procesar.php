@@ -3,5 +3,7 @@
 	fwrite($archivo, $_POST["txt-correo"]. ",". $_POST["txt-password"]."\n");
 	fclose($archivo);
 	echo "Registro almacenado";
+	echo "Pollo";
+	sleep(10);
 ?>
 
