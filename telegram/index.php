@@ -28,6 +28,7 @@
             </div>
             <div class="col-sm-5 col-xs-5" style="padding:0;">
                 <select id="slc-usuario" class="form-control">
+                    
                 </select>
             </div>
             <div class="col-sm-1 col-xs-1  heading-dot  pull-right">
@@ -51,71 +52,10 @@
 
           <!-- Search Box End -->
           <!-- sideBar -->
-          <div class="row sideBar">
+          <div class="row sideBar" id="div-contactos">
             
             <!-- Inicio de la lista de conversaciones -->
-            <!--Goku-->
-            <div class="row sideBar-body" onclick="seleccionarContacto(14,'Goku');">
-              <div class="col-sm-3 col-xs-3 sideBar-avatar">
-                <div class="avatar-icon">
-                  <img src="img/profile-pics/goku.jpg">
-                </div>
-              </div>
-              <div class="col-sm-9 col-xs-9 sideBar-main">
-                <div class="row">
-                  <div class="col-sm-8 col-xs-8 sideBar-name">
-                    <span class="name-meta">Goku
-                  </span>
-                  </div>
-                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
-                    <span class="time-meta pull-right">18:18
-                  </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!--Trunks-->
-            <div class="row sideBar-body" onclick="seleccionarContacto(26,'Trunks');">
-              <div class="col-sm-3 col-xs-3 sideBar-avatar">
-                <div class="avatar-icon">
-                  <img src="img/profile-pics/trunks.jpg">
-                </div>
-              </div>
-              <div class="col-sm-9 col-xs-9 sideBar-main">
-                <div class="row">
-                  <div class="col-sm-8 col-xs-8 sideBar-name">
-                    <span class="name-meta">Trunks
-                  </span>
-                  </div>
-                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
-                    <span class="time-meta pull-right">18:18
-                  </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!--Patricio-->
-            <div class="row sideBar-body" onclick="seleccionarContacto(1,'Patricio');">
-              <div class="col-sm-3 col-xs-3 sideBar-avatar">
-                <div class="avatar-icon">
-                  <img src="img/profile-pics/patricio.jpg">
-                </div>
-              </div>
-              <div class="col-sm-9 col-xs-9 sideBar-main">
-                <div class="row">
-                  <div class="col-sm-8 col-xs-8 sideBar-name">
-                    <span class="name-meta">Patricio
-                  </span>
-                  </div>
-                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
-                    <span class="time-meta pull-right">18:18
-                  </span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
 
             <!-- Fin de la lista de conversaciones -->
 
@@ -160,13 +100,13 @@
         <div class="row heading">
           <div class="col-sm-2 col-md-1 col-xs-3 heading-avatar">
             <div class="heading-avatar-icon">
-              <img src="img/profile-pics/goku.jpg">
+              <img src="" id="img-contacto">
             </div>
           </div>
           
 
           <div class="col-sm-8 col-xs-7 heading-name">
-            <a class="heading-name-meta">Goku
+            <a class="heading-name-meta" id="nombre-contacto">
             </a>
             <span class="heading-online">Online</span>
           </div>
@@ -179,51 +119,14 @@
         <!-- Heading End -->
 
         <!-- Message Box -->
-        <div class="row message" id="conversation">
+        <div class="row message" id="div-conversacion">
 
-          <div class="row message-previous">
+          <!--div class="row message-previous">
             <div class="col-sm-12 previous">
             </div>
-          </div>
+          </div-->
 
-          <div class="row message-body">
-            <div class="col-sm-12 message-main-receiver">
-              <div class="receiver">
-                <div class="message-text">
-                 Kakaroto!!!!
-                </div>
-                <span class="message-time pull-right">
-                  18:18
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div class="row message-body">
-            <div class="col-sm-12 message-main-sender">
-              <div class="sender">
-                <div class="message-text">
-                  Que tal Vegueta?
-                </div>
-                <span class="message-time pull-right">
-                  18:19
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div class="row message-body">
-            <div class="col-sm-12 message-main-receiver">
-              <div class="receiver">
-                <div class="message-text">
-                 Eres un insecto estupido!!!!
-                </div>
-                <span class="message-time pull-right">
-                  18:20
-                </span>
-              </div>
-            </div>
-          </div>
+         
         </div>
 
 
@@ -239,6 +142,7 @@
           </div>
           <div class="col-sm-1 col-xs-1 reply-recording">
             <i class="fa fa-microphone fa-2x" aria-hidden="true"></i>
+
           </div>
           <div id="btn-enviar" class="col-sm-1 col-xs-1 reply-send">
             <i class="fa fa-send fa-2x" aria-hidden="true"></i>
