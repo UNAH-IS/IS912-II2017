@@ -108,6 +108,7 @@
           <div class="col-sm-8 col-xs-7 heading-name">
             <a class="heading-name-meta" id="nombre-contacto">
             </a>
+            <input type="hidden" id="txt-receptor">
             <span class="heading-online">Online</span>
           </div>
 

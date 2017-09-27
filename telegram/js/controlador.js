@@ -8,6 +8,8 @@ $("#slc-usuario").change(function(){
 });
 
 function seleccionarContacto(codigoContacto, nombreContacto,imagen){
+	//Asignar el codigo del receptor o contacto a un input oculto
+	$("#txt-receptor").val(codigoContacto);
 	var parametros = 	"emisor="+$("#slc-usuario").val()+"&"+
 						"receptor="+codigoContacto;
 	$("#nombre-contacto").html(nombreContacto);
@@ -51,7 +53,27 @@ function seleccionarContacto(codigoContacto, nombreContacto,imagen){
 }
 
 $("#btn-enviar").click(function(){
-	alert("Enviar mensaje: " + $("#txta-mensaje").val());
+	//Codigo usuario emisor
+
+	//Codigo usuario receptor
+	
+	var parametros = 	"mensaje=" + $("#txta-mensaje").val()+"&"+
+						"emisor=" + $("#slc-usuario").val()+"&" + 
+						"receptor=" + $("#txt-receptor").val();
+	alert(parametros);
+	$.ajax({
+		url:"ajax/guardar-mensaje.php",
+		method:"POST",
+		data:parametros,
+		dataType:"html",
+		success:function(respuesta){
+			console.log(respuesta);
+		},
+		error:function(){
+
+		}
+	});
+
 });
 
 $(document).ready(function(){
