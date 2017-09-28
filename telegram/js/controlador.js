@@ -4,16 +4,24 @@
 */
 
 $("#slc-usuario").change(function(){
-	alert("USUARIO seleccionado: " + $("#slc-usuario").val());
+	//alert("USUARIO seleccionado: " + $("#slc-usuario").val());
 });
 
 function seleccionarContacto(codigoContacto, nombreContacto,imagen){
 	//Asignar el codigo del receptor o contacto a un input oculto
 	$("#txt-receptor").val(codigoContacto);
-	var parametros = 	"emisor="+$("#slc-usuario").val()+"&"+
-						"receptor="+codigoContacto;
 	$("#nombre-contacto").html(nombreContacto);
 	$("#img-contacto").attr("src",imagen);//img-contacto
+
+	cargarMensajes();
+}
+
+function cargarMensajes(){
+	console.log("Obteniendo mensajes");
+	var codigoContacto = $("#txt-receptor").val();
+	var parametros = 	"emisor="+$("#slc-usuario").val()+"&"+
+						"receptor="+codigoContacto;
+	
 	//alert("Informacion a enviar a la peticion AJAX: " + parametros);
 
 	$.ajax({
@@ -60,14 +68,28 @@ $("#btn-enviar").click(function(){
 	var parametros = 	"mensaje=" + $("#txta-mensaje").val()+"&"+
 						"emisor=" + $("#slc-usuario").val()+"&" + 
 						"receptor=" + $("#txt-receptor").val();
-	alert(parametros);
+	//alert(parametros);
 	$.ajax({
 		url:"ajax/guardar-mensaje.php",
 		method:"POST",
 		data:parametros,
-		dataType:"html",
+		dataType:"json",
 		success:function(respuesta){
-			console.log(respuesta);
+			$("#div-conversacion").append(
+				'<div class="row message-body">'+
+				'  <div class="col-sm-12 message-main-sender">'+
+				'    <div class="sender">'+
+				'      <div class="message-text">'+
+				$("#txta-mensaje").val()+
+				'      </div>'+
+				'      <span class="message-time pull-right">'+
+				respuesta.hora+
+				'      </span>'+
+				'    </div>'+
+				'  </div>'+
+				'</div>'
+				);
+			$("#txta-mensaje").val("");
 		},
 		error:function(){
 
@@ -116,4 +138,9 @@ $(document).ready(function(){
 			alert("Ocurrio un error");
 		}
 	});
+
+	
+
 });
+
+setInterval(cargarMensajes,5000);
