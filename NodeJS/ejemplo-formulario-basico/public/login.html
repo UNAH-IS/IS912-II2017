@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+</head>
+<body>
+	<input type="text" name="txt-usuario" id="txt-usuario" placeholder="Usuario"><br>
+	<input type="password" name="txt-contrasena" id="txt-contrasena" placeholder="Contraseña">
+	<button id="btn-login" type="button">Ingresar</button>
+</body>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$("#btn-login").click(function(){
+		$.ajax({
+			url:"/login",
+			method:"GET",
+			data: 	"usuario="+$("#txt-usuario").val()+
+					"&contrasena="+$("#txt-contrasena").val(),
+			dataType:"json",
+			success:function(respuesta){
+				alert("Usuario: " + respuesta.usuario);
+				alert("Contraseña: " + respuesta.contrasena);
+			},
+			error:function(err){
+				alert(err);
+			}
+		});
+	});
+</script>
+</html>
