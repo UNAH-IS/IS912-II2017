@@ -1,0 +1,98 @@
+//Servidor básico:
+
+var http = require("http");
+
+http.createServer(function(request, response){
+	response.writeHead(200,{"Content-Type":"text/plain"});
+	response.end("Hola mundo");
+	console.log("Se sirvio una peticion");
+}).listen(8081);
+console.log("Se inicio el server");
+
+
+
+//Instalar repositorios locales:
+npm install <repositorio>
+
+//Instalar repositorios globales:
+npm install <repositorio> -g
+
+//Lista modulos locales instalados
+npm ls;
+
+//Lista modulos globales instalados
+npm ls -g;
+
+//uptade module:
+npm update <modulo>
+
+//desinstalar modulo
+npm uninstall <modulo>
+
+//crear modulo que sera publicado:
+npm init;
+
+
+--Ejecutar este comando para que se puedan ejecutar archivos de nodejs y luego modificarlos sin necesidad de reiniciar el servicio.
+npm install -g nodemon
+
+
+
+--Inicializar un proyecto en nodejs: 
+npm init
+
+
+---Instalacion del modulo de express, --save agrega la dependencia al archivo package.json
+npm install --save express
+
+
+Modulos:
+	npm install --save express //Para instalar el modulo express el cual trae muchas funcionalidades que simplifican el desarrollo en nodejs
+
+	npm install --save body-parser //Para tratar peticion post y poder acceder a los parametros.
+
+
+/*Crear un modulo de uso local:
+*Crear un archivo js en el cual a la variable exports se le agregan definiciones de variables y funciones
+*luego ese archivo se puede incluir en otro utilzando require('./nombrearchivomodulo'); // ojo sin extension.
+*/
+
+
+//Obtener la url:
+req.url
+
+//Para acceder a cada parametro de la url se puede usar el modulo url, se importa y se utiliza el metodo parse:
+var q = url.parse(request.url,true).query;
+response.write(q.parametro);
+//Otras funciones de url:
+var q = url.parse(adr, true);
+
+console.log(q.host); //returns 'localhost:8080'
+console.log(q.pathname); //returns '/default.htm'
+console.log(q.search); //returns '?year=2017&month=february'
+var qdata = q.query; //returns an object: { year: 2017, month: 'february' }
+
+//Trabajar con archivos:
+/*Common use for the File System module:
+
+Read files
+Create files
+Update files
+Delete files
+Rename files*/
+
+var fs = require('fs');
+
+//Leer:
+ fs.readFile('demofile1.html', function(err, data) {...
+//Agregar contenido:
+ fs.appendFile('mynewfile1.txt', 'Hello content!', function (err) { if (err) throw err;
+//Crear archivo vacio:
+ fs.open('mynewfile2.txt', 'w', function (err, file) { if (err) throw err;
+//Escribir y reemplazar:
+ fs.writeFile('mynewfile3.txt', 'Hello content!', function (err) { if (err) throw err;
+//Borrar archivos:
+ fs.unlink('mynewfile2.txt', function (err) { if (err) throw err;
+//Cambiar nombre a archivo:
+ fs.rename('mynewfile1.txt', 'myrenamedfile.txt', function (err) { if (err) throw err;
+
