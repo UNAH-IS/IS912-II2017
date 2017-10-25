@@ -26,6 +26,8 @@ function cargarMensajes(){
 
 	$.ajax({
 		url:"/mensajes",
+		//Tambien se puede utilizar el siguiente patron:
+		//url:"/mensajes/"+$("#slc-usuario").val()+"/"+codigoContacto,
 		data:parametros,
 		method:"POST",
 		dataType:"json",
@@ -55,7 +57,7 @@ function cargarMensajes(){
 			}
 		},
 		error:function(e){
-			alert("Error: " + e);
+			alert("Error: " + JSON.stringify(e));
 		}
 	});
 }
@@ -70,12 +72,14 @@ $("#btn-enviar").click(function(){
 						"receptor=" + $("#txt-receptor").val();
 	//alert(parametros);
 	$.ajax({
-		url:"ajax/guardar-mensaje.php",
+		url:"/enviar-mensaje",
 		method:"POST",
 		data:parametros,
 		dataType:"json",
 		success:function(respuesta){
-			$("#div-conversacion").append(
+			alert(respuesta);
+			if (respuesta.affectedRows == 1){
+				$("#div-conversacion").append(
 				'<div class="row message-body">'+
 				'  <div class="col-sm-12 message-main-sender">'+
 				'    <div class="sender">'+
@@ -89,7 +93,11 @@ $("#btn-enviar").click(function(){
 				'  </div>'+
 				'</div>'
 				);
-			$("#txta-mensaje").val("");
+				$("#txta-mensaje").val("");	
+			}
+			else{
+				alert("Mensaje no enviado");
+			}
 		},
 		error:function(){
 
