@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hola mundo</title>
+</head>
+<script src = "/socket.io/socket.io.js"></script>
+<script>
+	var socket = io();
+	socket.on('message',function(data){
+		console.log(data);
+	});
+
+	function enviarMensaje(){
+		socket.emit("mensaje-cliente","Hola, este es el mensaje que se envia al dar click: " + document.getElementById("txt-mensaje").value);
+	}
+</script>
+<body>
+	Hola mundo
+	<input type="text" id="txt-mensaje">
+	<button type="button" onclick="enviarMensaje();">Mensaje</button>
+</body>
+</html>

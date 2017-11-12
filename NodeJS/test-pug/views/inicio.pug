@@ -1,0 +1,20 @@
+doctype html
+html
+	head
+		title Hola mundo con PUG
+	body
+		div Hola #{name} #{apellido}, Estudia #{carrera.nombre}
+		-if (name == "Pedro")
+			div Si es Pedro!!!
+		-else
+			div No es pedro :()
+		ul#lista-desordenada
+			-for(var i=0;i<5;i++)
+				li Valor
+
+	footer Este es el contenido del pie de PAGINA
+	script(type="text/javascript").
+		hola();
+		function hola(){
+			alert("Hola desde una funcion");
+		}

@@ -1,0 +1,25 @@
+doctype html
+html 
+	head
+		title Este es el titulo
+	body
+		-if (usuario.nombre=='Juan')
+			div Hola #{usuario.nombre}, esta es una plantilla de pug
+		div#contenido.well.cuadrogrande.textoRojo Este es el contenido del div con ID
+		input(type="text" placeholder="Ingrese su nombre")
+		div 
+			|Este es una linea
+			br
+			|Esta es otra
+			|Esta es otra
+			|Esta es la ultima
+		ul
+			-for (var i=0;i<10;i++)
+				li Item
+	footer Este es el pie de pagina
+	script(type="text/javascript").
+		function imprimirMensaje(){
+			alert("Hola mundo");
+		}
+
+		imprimirMensaje();

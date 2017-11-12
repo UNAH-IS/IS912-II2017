@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script src = "/socket.io/socket.io.js"></script>
+<script type="text/javascript">
+	var socket = io();
+	socket.on('message',function(data){
+		console.log(data);
+	});
+
+	socket.on("mensaje-servidor",function(data){
+		console.log(data);
+	});
+	function enviarMensaje(){	
+		socket.emit("enviar-mensaje","Mensaje del cliente: " + 
+			document.getElementById("txt-mensaje").value
+		);
+	}
+</script>
+<body>
+	Hola mundo
+
+	<input type="text" id = "txt-mensaje">
+	<button type="button" onclick="enviarMensaje();">Enviar mensaje</button>
+</body>
+</html>
